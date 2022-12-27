@@ -8,6 +8,11 @@ int ConvertToIntUserMsg(string mesage)
 int AllNaturalNumbers(int num)
 {
     {
+        if (num < 0)
+        {
+            Console.WriteLine("Число не натуральное");
+            return num;
+        }
         if (num == 1) return 1;
         Console.Write($"{num} ");
         return AllNaturalNumbers(num - 1);
