@@ -6,19 +6,20 @@ int ConvertToIntUserMsg(string message)
     return Convert.ToInt32(Console.ReadLine());
 }
 
-int SumAllNaturalNumbers(int N,int M)
+int SumAllNaturalNumbers(int N, int M)
 {
-    if (N==M) return M;
+    if (N < 0) N = N + (-N);
+    if (N == M) return M;
     else
-    {   
+    {
         int sum = N;
-        return sum + SumAllNaturalNumbers((N+1),(M));
+        return sum + SumAllNaturalNumbers((N + 1), (M));
     }
-    
+
 }
 
 int Num1 = ConvertToIntUserMsg("Введите первое натрульное число: ");
 int Num2 = ConvertToIntUserMsg("Введите второе натрульное число: ");
-Console.WriteLine(SumAllNaturalNumbers(Num1,Num2));
+Console.WriteLine(SumAllNaturalNumbers(Num1, Num2));
 
 
